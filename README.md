@@ -12,15 +12,15 @@
 
 ## 1. Descrição
 
-A **Game Store API** é uma aplicação desenvolvida para realizar o gerenciamento de jogos de uma loja virtual, permitindo o cadastro, consulta, atualização e remoção de produtos do catálogo. Este projeto foi desenvolvido com fins educacionais, simulando uma aplicação real de e-commerce para praticar conceitos de **API REST**, **Programação Orientada a Objetos** e desenvolvimento backend utilizando **Java e Spring Boot**. 
+A **Loja Games API** é uma aplicação desenvolvida para realizar o gerenciamento de jogos de uma loja virtual, permitindo o cadastro, consulta, atualização e remoção de produtos do catálogo. Este projeto foi desenvolvido com fins educacionais, simulando uma aplicação real de e-commerce para praticar conceitos de **API REST**, **Programação Orientada a Objetos** e desenvolvimento backend utilizando **Java e Spring Boot**. 
 
 Entre os principais recursos da aplicação, destacam-se: 
 
-1. Cadastro e gerenciamento de jogos
-2. Organização dos jogos por categorias 
-3. Consulta de jogos disponíveis no catálogo 
-4. Consulta de jogos por nome
-5. Consulta de jogos por preço
+1. Cadastro e gerenciamento de produtos
+2. Organização dos produtos por categorias 
+3. Consulta de produtos disponíveis no catálogo 
+4. Consulta de produtos por nome
+5. Consulta de produtos por preço
 6. Atualização e exclusão de informações dos produtos 
 7. Integração com banco de dados relacional
 
@@ -28,15 +28,15 @@ Entre os principais recursos da aplicação, destacam-se:
 
 ## 2. Sobre esta API
 
-A API da **Game Store** foi desenvolvida utilizando **Java** e o framework **Spring Boot**, seguindo os princípios da arquitetura **MVC (Model-View-Controller)** e do padrão arquitetural **REST**. A aplicação permite o gerenciamento dos recursos **Jogos** e **Categorias**, possibilitando a manipulação dos dados através de endpoints HTTP.
+A API da **Loja Games** foi desenvolvida utilizando **Java** e o framework **Spring Boot**, seguindo os princípios da arquitetura **MVC (Model-View-Controller)** e do padrão arquitetural **REST**. A aplicação permite o gerenciamento dos recursos **Produtos** e **Categorias**, possibilitando a manipulação dos dados através de endpoints HTTP.
 
 ### 2.1. Principais funcionalidades da API:
 
-1. Consulta de jogos cadastrados 
-2. Cadastro de novos jogos 
-3. Atualização dos dados dos jogos 
-4. Remoção de jogos do catálogo 
-5. Associação de jogos às suas respectivas categorias 
+1. Consulta de produtos cadastrados 
+2. Cadastro de novos produtos 
+3. Atualização dos dados dos produtos 
+4. Remoção de produtos do catálogo 
+5. Associação de produtos às suas respectivas categorias 
 6. Persistência dos dados utilizando banco de dados MySQL
 
 
