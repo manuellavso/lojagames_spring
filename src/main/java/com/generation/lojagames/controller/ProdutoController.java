@@ -90,7 +90,6 @@ public class ProdutoController {
 			produto.setId(null);
 				
 				return ResponseEntity.status(HttpStatus.CREATED).body(produtoRepository.save(produto));
-			
 			//INSERT INTO tb_produtos(nome, preco, foto, estoque) VALUES (?, ?);*/
 		}
 			
