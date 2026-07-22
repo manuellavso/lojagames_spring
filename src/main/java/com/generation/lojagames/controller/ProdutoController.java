@@ -66,16 +66,16 @@ public class ProdutoController {
 	
 	//4. PESQUISA POR PREÇO MAIOR QUE EM ORDEM CRESC
 	@GetMapping("/preco_maior/{preco}")
-	public ResponseEntity<List<Produto>> findByPrecoGreaterThanOrderByPreco(@PathVariable BigDecimal preco){
-		return ResponseEntity.ok(produtoRepository.findByPrecoGreaterThanOrderByPreco(preco));
+	public ResponseEntity<List<Produto>> getAllPrecoMaiorQue(@PathVariable BigDecimal preco){
+		return ResponseEntity.ok(produtoRepository.findAllByPrecoGreaterThanOrderByPreco(preco));
 	
 		//SELECT * FROM tb_produtos WHERE preco > ? ORDER BY preco;
 	}
 	
 	//5. PESQUISA POR PREÇO MENOR QUE EM ORDEM DECRESC
 	@GetMapping("/preco_menor/{preco}")
-	public ResponseEntity<List<Produto>> findByPrecoLessThanOrderByPrecoDesc(@PathVariable BigDecimal preco){
-		return ResponseEntity.ok(produtoRepository.findByPrecoLessThanOrderByPrecoDesc(preco));
+	public ResponseEntity<List<Produto>> getAllPrecoMenorQue(@PathVariable BigDecimal preco){
+		return ResponseEntity.ok(produtoRepository.findAllByPrecoLessThanOrderByPrecoDesc(preco));
 	
 		//SELECT * FROM tb_produtos WHERE preco < ? ORDER BY preco DESC;
 	}
