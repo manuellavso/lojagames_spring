@@ -3,6 +3,7 @@ package com.generation.lojagames.model;
 import java.math.BigDecimal;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -17,6 +18,8 @@ import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 
+@JsonPropertyOrder({ "id", "nome", "foto", "preco", "estoque", "categoria"})
+
 @Entity 
 @Table(name = "tb_produtos")
 public class Produto {
@@ -26,7 +29,7 @@ public class Produto {
 		private Long id;
 		
 		@NotBlank(message = "O atributo nome é obrigatório!")
-		@Size(max = 255, message = "O atributo nome deve ter no máximo 255 caracteres.")
+		@Size(min = 3, max = 255, message = "O atributo nome deve ter no mínimo 3 e no máximo 255 caracteres.")
 		@Column(length = 255)
 		private String nome;
 		
@@ -37,8 +40,8 @@ public class Produto {
 		private BigDecimal preco;
 		
 		@NotBlank(message = "O atributo foto é obrigatório!")
-		@Size(max = 255, message = "O atributo foto deve ter no máximo 255 caracteres.")
-		@Column(length = 255)
+		@Size(max = 500, message = "O atributo foto deve ter no máximo 500 caracteres.")
+		@Column(length = 500)
 		private String foto;
 		
 		@NotBlank(message = "O atributo estoque é obrigatório!")

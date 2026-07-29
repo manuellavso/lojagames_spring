@@ -3,6 +3,7 @@ package com.generation.lojagames.model;
 import java.util.List;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -16,6 +17,8 @@ import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
+@JsonPropertyOrder({ "id", "tipo"})
+
 @Entity
 @Table(name = "tb_categorias")
 public class Categoria {
@@ -24,10 +27,10 @@ public class Categoria {
 		@GeneratedValue(strategy = GenerationType.IDENTITY)
 		private Long id;
 
-		@NotBlank(message = "O atributo descrição é obrigatório!")
-		@Size(max = 255, message = "O atributo descrição deve ter no máximo 255 caracteres.")
-		@Column(length = 255)
-		private String descricao;
+		@NotBlank(message = "O atributo tipo é obrigatório!")
+		@Size(min = 3,max = 100, message = "O atributo tipo deve ter no mínimo 3 e no máximo 100 caracteres.")
+		@Column(length = 100)
+		private String tipo;
 		
 		@OneToMany(fetch = FetchType.LAZY, mappedBy = "categoria", cascade = CascadeType.REMOVE) 
 		@JsonIgnoreProperties(value = "categoria", allowSetters = true)
@@ -43,11 +46,11 @@ public class Categoria {
 		}
 
 		
-		public String getDescricao() {
-			return descricao;
+		public String getTipo() {
+			return tipo;
 		}
-		public void setDescricao(String descricao) {
-			this.descricao = descricao;
+		public void setTipo(String tipo) {
+			this.tipo = tipo;
 		}
 
 		

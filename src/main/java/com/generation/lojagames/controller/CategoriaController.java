@@ -50,12 +50,12 @@ public class CategoriaController {
 		//SELECT * FROM tb_categorias WHERE id = ?;
 	}
 		
-	//3. PESQUISA POR DESCRIÇÃO
-	@GetMapping("/descricao/{descricao}")
-	public ResponseEntity<List<Categoria>> getAllByDescricao(@PathVariable String descricao){
-		return ResponseEntity.ok(categoriaRepository.findAllByDescricaoContainingIgnoreCase(descricao));
+	//3. PESQUISA POR TIPO
+	@GetMapping("/tipo/{tipo}")
+	public ResponseEntity<List<Categoria>> getAllByTipo(@PathVariable String tipo){
+		return ResponseEntity.ok(categoriaRepository.findAllByTipoContainingIgnoreCase(tipo));
 			
-		//SELECT + FROM tb_categorias WHERE descricao LIKE "%?%";
+		//SELECT + FROM tb_categorias WHERE tipo LIKE "%?%";
 	}
 		
 		
@@ -65,7 +65,7 @@ public class CategoriaController {
 	public ResponseEntity<Categoria> post(@Valid @RequestBody Categoria categoria){ 
 		return ResponseEntity.status(HttpStatus.CREATED).body(categoriaRepository.save(categoria));
 				
-		//INSERT INTO tb_temas(descricao) VALUES (?);
+		//INSERT INTO tb_temas(tipo) VALUES (?);
 	}
 		
 	
@@ -76,7 +76,7 @@ public class CategoriaController {
 				
 		if(categoriaRepository.existsById(categoria.getId()))
 			return ResponseEntity.ok(categoriaRepository.save(categoria));
-			//UPDATE tb_categorias SET descricao = ? WHERE id = ?;
+			//UPDATE tb_categorias SET tipo = ? WHERE id = ?;
 				
 			return ResponseEntity.notFound().build();
 	}

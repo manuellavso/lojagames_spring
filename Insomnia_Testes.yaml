@@ -1,0 +1,571 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Loja Games
+meta:
+  id: wrk_0316ade1249c47af94fb946d6c1da049
+  created: 1784725469388
+  modified: 1784725469388
+  description: ""
+collection:
+  - name: Produto
+    meta:
+      id: fld_8adc54e161c143c7ae0b0c41cbd9acc8
+      created: 1784725565242
+      modified: 1784725565242
+      sortKey: -1784725565242
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Listar todos os Produtos
+        meta:
+          id: req_8bdb365c408e4ad3ad91c790bdb3540f
+          created: 1784725569511
+          modified: 1785356391077
+          isPrivate: false
+          description: ""
+          sortKey: -1784725569511
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: Listar Produto por ID
+        meta:
+          id: req_edf0dcb9aabd451082af4f94651ec7f9
+          created: 1784725607310
+          modified: 1785356403774
+          isPrivate: false
+          description: ""
+          sortKey: -1784512810328
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/nome/valorant
+        name: Listar Produto por Nome
+        meta:
+          id: req_76c40979da274fff8a3ff35fa876cbab
+          created: 1784725630066
+          modified: 1785356412620
+          isPrivate: false
+          description: ""
+          sortKey: -1784406430736.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Criar Produto
+        meta:
+          id: req_38af6c3ffa8c487ab1b2cd09a51b7e1e
+          created: 1784725652134
+          modified: 1785356433534
+          isPrivate: false
+          description: ""
+          sortKey: -1784353240940.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": " ",
+            	"foto": " ",
+            	"preco": " ",
+            	"estoque": " ",
+            	"categoria":{
+            		"id": 1
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_bd1fb29e5bae47d89a4760e4b29f7868
+          created: 1784725752729
+          modified: 1785356441365
+          isPrivate: false
+          description: ""
+          sortKey: -1784326646042.875
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": " ",
+            	"foto": " ",
+            	"preco": " ",
+            	"estoque": " ",
+            	"categoria":{
+            		"id": 1
+            	}
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: Deletar Produto por ID
+        meta:
+          id: req_2f5b729ebe3b4ed6aab5a33abc04e2c2
+          created: 1784725776633
+          modified: 1785356451439
+          isPrivate: false
+          description: ""
+          sortKey: -1784326645942.875
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/preco_maior/200
+        name: Listar Produto por Preço Maior Que
+        meta:
+          id: req_1100161b81cf4268be034a11e2e4d91a
+          created: 1784727124233
+          modified: 1785356419569
+          isPrivate: false
+          description: ""
+          sortKey: -1784379835838.625
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/preco_menor/200
+        name: Listar Produto por Preço Menor Que
+        meta:
+          id: req_76cf9c090f964aa2ad505d09a399d70d
+          created: 1784727131464
+          modified: 1785356426604
+          isPrivate: false
+          description: ""
+          sortKey: -1784366538389.6875
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categoria
+    meta:
+      id: fld_967bb492659e41558b6657ad85eb2408
+      created: 1784725795434
+      modified: 1784725795434
+      sortKey: -1784508608385.5
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Criar Categoria
+        meta:
+          id: req_3c86e5752e4442919c5a3fbfb6aa35a7
+          created: 1784725795434
+          modified: 1785356511971
+          isPrivate: false
+          description: ""
+          sortKey: -1784353240940.75
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"tipo": "Tiros - jogos de atirar"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Deletar Categoria por ID
+        meta:
+          id: req_5d2a7571ad5143d587ab60588a2d6c73
+          created: 1784725795434
+          modified: 1785356544702
+          isPrivate: false
+          description: ""
+          sortKey: -1784326645942.875
+        method: DELETE
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Listar todas as Categorias
+        meta:
+          id: req_6e83c7559f7a46c793852890e18f3a2a
+          created: 1784725795434
+          modified: 1785356462982
+          isPrivate: false
+          description: ""
+          sortKey: -1784725569511
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/5
+        name: Listar Categoria por ID
+        meta:
+          id: req_b74c4c570e79451ca6abdb5f636fefeb
+          created: 1784725795434
+          modified: 1785356470873
+          isPrivate: false
+          description: ""
+          sortKey: -1784512810328
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar Categoria
+        meta:
+          id: req_d7ddd00947554012bc4445635c088547
+          created: 1784725795434
+          modified: 1785356535231
+          isPrivate: false
+          description: ""
+          sortKey: -1784326646042.875
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 13,
+            	"descricao": "Descrição 13 - Atualizado"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/tipo/tiro
+        name: Listar Categoria por Tipo
+        meta:
+          id: req_ecab048212154dafbc884d2d57da78a5
+          created: 1784725795434
+          modified: 1785356519433
+          isPrivate: false
+          description: ""
+          sortKey: -1784406430736.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Usuario
+    meta:
+      id: fld_372b7d4686d947f3994862dc81271f43
+      created: 1785355688921
+      modified: 1785355688921
+      sortKey: -1785355688921
+      description: ""
+    children:
+      - url: http://localhost:8080/usuarios/cadastrar
+        name: Cadastrar Usuário
+        meta:
+          id: req_fb6ce34e7f964c4585f0c029831cb78b
+          created: 1785355699595
+          modified: 1785356701488
+          isPrivate: false
+          description: ""
+          sortKey: -1785355699595
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"nome": "Root Guardião",
+            	"usuario": "root@gmail.com",
+            	"senha": "root1234",
+            	"foto": "-",
+            	"data_nascimento": "2000-03-20"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/logar
+        name: Autenticar Usuário
+        meta:
+          id: req_02fd388ed51447d9a1995a1a839b8f71
+          created: 1785355953545
+          modified: 1785356722376
+          isPrivate: false
+          description: ""
+          sortKey: -1785355953545
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"usuario": "root@gmail.com",
+            	"senha": "root1234"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/all
+        name: Consultar todos os Usuários
+        meta:
+          id: req_b85d00e9428749df9f66049e777d1e97
+          created: 1785356046496
+          modified: 1785356283633
+          isPrivate: false
+          description: ""
+          sortKey: -1785356046496
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/1
+        name: Consultar Usuário por ID
+        meta:
+          id: req_9707ddd332cf4bd3806ea069fa086cc3
+          created: 1785356085480
+          modified: 1785356232780
+          isPrivate: false
+          description: ""
+          sortKey: -1785356000020.5
+        method: GET
+        headers:
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/usuarios/atualizar
+        name: Atualizar Dados do Usuário
+        meta:
+          id: req_abcfa96327e34410a1cbcaff26159674
+          created: 1785356132536
+          modified: 1785356730393
+          isPrivate: false
+          description: ""
+          sortKey: -1785040634553
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+            	"id": 1,
+            	"nome": "Manuella Oliveira",
+            	"usuario": "manuella@gmail.com",
+            	"senha": "manu1234",
+            	"foto": "https://ik.imagekit.io/iibl43pgxp/Manu",
+            	"data_nascimento": "2016-03-20"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+          - name: Authorization
+            value: "{% response 'body', 'req_02fd388ed51447d9a1995a1a839b8f71',
+              'b64::JC50b2tlbg==::46b', 'never', 60 %}"
+            description: ""
+            disabled: false
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_3434dbcbd6d763698ede977432d613a9afc852f3
+    created: 1784725469412
+    modified: 1784725469412
+environments:
+  name: Base Environment
+  meta:
+    id: env_3434dbcbd6d763698ede977432d613a9afc852f3
+    created: 1784725469401
+    modified: 1784725469401
+    isPrivate: false
