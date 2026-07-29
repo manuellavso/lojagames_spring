@@ -1,4 +1,4 @@
-<div align="center">  <h1 style="color: #6A0DAD;"> 🎮 Projeto Loja Games </h1>  <p> Sistema de gerenciamento de jogos desenvolvido com Java e Spring Boot. </p>  </div>
+# 🎮 Projeto Loja Games - Backend com Spring Boot
 
 <p align="center">
   <img src="https://ik.imagekit.io/iibl43pgxp/ChatGPT%20Image%2022%20de%20jul.%20de%202026,%2010_38_54.png" width="500"/>
