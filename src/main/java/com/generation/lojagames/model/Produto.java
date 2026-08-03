@@ -16,6 +16,7 @@ import jakarta.validation.constraints.DecimalMax;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.PositiveOrZero;
 import jakarta.validation.constraints.Size;
 
 @JsonPropertyOrder({ "id", "nome", "foto", "preco", "estoque", "categoria"})
@@ -44,10 +45,10 @@ public class Produto {
 		@Column(length = 500)
 		private String foto;
 		
-		@NotBlank(message = "O atributo estoque é obrigatório!")
-		@Size(max = 255, message = "O atributo estoque deve ter no máximo 255 caracteres.")
-		@Column(length = 255)
-		private Long estoque;
+		@NotNull(message = "O atributo estoque é obrigatório!")
+		@PositiveOrZero(message = "O atributo estoque deve ser positivo ou zero.")
+		@Column(nullable= false)
+		private Long estoque; //Na próxima vez, Integer adequa melhor...
 
 		//OBJETO DA CLASSE CATEGORIA
 		@ManyToOne //FOREIGN KEY
